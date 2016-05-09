@@ -1,0 +1,52 @@
+body {
+    background-color: #ffd060;
+}
+
+form {
+    color: green;
+}
+
+center
+{
+	color:#a041d0;
+	font-size:200%;
+	margin-top:30px;
+	margin-bottom:10px;
+}
+
+h3 {
+    color:#a041d0;
+    top: 50%;
+    left: 50%;
+   
+    margin-right: -800px;
+    
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: left;
+    color:#a041d0;
+}
+
+
+#centerbuttons
+{
+background-color: "#a041d0";
+text-align:center;
+}
+
+#logindiv {
+    height: 200px;
+    width: 400px;
+    
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
