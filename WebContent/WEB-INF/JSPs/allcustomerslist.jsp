@@ -8,8 +8,8 @@
 <title>Here are the customer details</title>
 </head>
 <body>
-<table>
-<tr>
+<table border="1">
+<tr bgcolor="#a041d0">
 		<th>Customer Id</th>
 		<th>Name</th>
 		<th>Address</th>
@@ -24,14 +24,14 @@
 	
     <c:forEach items="${customerdetails}" var="customerModel">
         <tr>
-            <td><c:out value="${customerModel.getCustomerNumber()}" /></td>
-             <td><c:out value="${customerModel.getCustomerName()}" /></td>
-              <td><c:out value="${customerModel.getAddressLine1()}" /></td>
-              <td><c:out value="${customerModel.getCity()}" /></td>
-               <td><c:out value="${customerModel.getCountry()}" /></td>
-                <td><c:out value="${customerModel.getPostalCode()}" /></td>
-                 <td><c:out value="${customerModel.getPhone()}" /></td>
-                  <td><c:out value="${customerModel.getCreditLimit()}" /></td>
+            <td bgcolor=#ff9105><c:out value="${customerModel.getCustomerNumber()}" /></td>
+             <td bgcolor=#ff9105><c:out value="${customerModel.getCustomerName()}" /></td>
+              <td bgcolor=#ff9105><c:out value="${customerModel.getAddressLine1()}" /></td>
+              <td bgcolor=#ff9105><c:out value="${customerModel.getCity()}" /></td>
+               <td bgcolor=#ff9105><c:out value="${customerModel.getCountry()}" /></td>
+                <td bgcolor=#ff9105><c:out value="${customerModel.getPostalCode()}" /></td>
+                 <td bgcolor=#ff9105><c:out value="${customerModel.getPhone()}" /></td>
+                  <td bgcolor=#ff9105><c:out value="${customerModel.getCreditLimit()}" /></td>
            
         </tr>
     </c:forEach>

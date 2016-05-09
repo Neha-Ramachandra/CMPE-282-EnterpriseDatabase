@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="style.css">
+
+<center>Cloudacle Application</center>
+
+</head>
 <body>
-<form name="HelloForm" method="post" action="loginservlet">
-Enter the Customer id to login : <input type="text" id="custid" name="customerid">
-<br />
 
-Enter the Customer's first name for password : <input type="password" id="custfirstname" name="custpwd">
-<br />
-
-<input type="submit" value="Submit" />
-
-
-
-</form>
+	<div id="logindiv">
+		<center style="font-size: 180%";>Login</center>
+		<fieldset>
+			<form name="HelloForm" method="post" action="loginservlet">
+				<div id="loginelements">
+					<label>Customer id :</label><input type="text" id="custid"
+						name="customerid"> <br /> <label>Customer's first
+						name :</label><input type="password" id="custfirstname" name="custpwd">
+					<br /> <br />
+					<div id="centerbuttons">
+						<input type="submit" value="Submit" class="submit" />
+					</div>
+				</div>
+			</form>
+		</fieldset>
+	</div>
 </body>
 </html>
+
