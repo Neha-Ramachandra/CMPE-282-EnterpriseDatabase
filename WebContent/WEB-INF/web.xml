@@ -29,7 +29,7 @@
     <servlet-name>customers</servlet-name>
     <url-pattern>/allcustomerslist.jsp</url-pattern>
   </servlet-mapping>
-   <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>employees</servlet-name>
     <url-pattern>/allemployeeslist.jsp</url-pattern>
   </servlet-mapping>
@@ -74,8 +74,12 @@
     <url-pattern>/updatedproductlinelist.jsp</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>login.html</welcome-file>
+    <welcome-file>adminLogin.html</welcome-file>
+    <welcome-file>employeelogin.html</welcome-file>
+     <welcome-file>login.html</welcome-file>
     <welcome-file>index.html</welcome-file>
+    <welcome-file>employeeIndex.html</welcome-file>
+    <welcome-file>adminindex.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>

@@ -69,6 +69,17 @@ public class EmployeeDAO {
 				         
 		}
 		
+		public boolean employeeLogin(Integer employeeId,String employeeNamePassword) throws Exception,IllegalAccessException
+		{
+				Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+
+					PreparedStatement preparedStatement = con.prepareStatement("select * from employees where employeeNumber = "+employeeId+" AND firstName= \""+employeeNamePassword+"\"");
+					ResultSet resultSet = preparedStatement.executeQuery();
+					return resultSet.isBeforeFirst();		
+		}
+		
 	public boolean isValidOfficeCode(Integer employeesByOfficeCode) throws Exception,IllegalAccessException
 	{
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
