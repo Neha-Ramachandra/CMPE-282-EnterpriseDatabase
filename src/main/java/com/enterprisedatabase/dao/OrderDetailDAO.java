@@ -19,7 +19,7 @@ public class OrderDetailDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			Connection cont = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+			Connection cont = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "db_user", "db_admin");
 
 			PreparedStatement preparedStatement = cont
 					.prepareStatement("select * from orderdetails order by orderNumber asc");
@@ -50,7 +50,7 @@ public class OrderDetailDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "db_user", "db_admin");
 
 			PreparedStatement preparedStatement = con
 					.prepareStatement("select * from orderdetails where orderNumber =" + orderNum + "");
@@ -78,7 +78,7 @@ public class OrderDetailDAO {
 		PreparedStatement preparedStatement;
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "db_user", "db_admin");
 
 		Statement st = con.createStatement();
 

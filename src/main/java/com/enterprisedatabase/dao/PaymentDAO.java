@@ -20,7 +20,7 @@ public class PaymentDAO
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+            Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
             PreparedStatement preparedStatement = con.prepareStatement("select * from payments order by checkNumber asc");
 
@@ -47,7 +47,7 @@ public class PaymentDAO
   	{
   		Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-          Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+          Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
           Statement st = con.createStatement();
   		 
@@ -67,7 +67,7 @@ public class PaymentDAO
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+            Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
             Statement st = con.createStatement();
 

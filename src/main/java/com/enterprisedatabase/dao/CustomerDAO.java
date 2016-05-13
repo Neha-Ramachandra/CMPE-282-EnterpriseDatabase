@@ -22,7 +22,7 @@ public class CustomerDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+		Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 			PreparedStatement preparedStatement = con.prepareStatement("select * from customers order by customerName asc");
 
@@ -55,7 +55,7 @@ public class CustomerDAO {
 //		
 //			Class.forName("com.mysql.jdbc.Driver").newInstance();
 //
-//			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+//			Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_db_db_admin");
 //
 //				PreparedStatement preparedStatement = con.prepareStatement("select * from customers where customerNumber ="+customerId+" AND contactFirstName="+customerNamePassword+"");
 //				ResultSet resultSet = preparedStatement.executeQuery();
@@ -69,7 +69,7 @@ public class CustomerDAO {
 	{
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+			Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 				PreparedStatement preparedStatement = con.prepareStatement("select * from customers where customerNumber = "+customerId+" AND contactFirstName= \""+customerNamePassword+"\"");
 				ResultSet resultSet = preparedStatement.executeQuery();
@@ -84,7 +84,7 @@ public class CustomerDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+		Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 			PreparedStatement preparedStatement = con.prepareStatement("select * from customers where customerNumber ="+customerId+"");
 
@@ -118,7 +118,7 @@ public class CustomerDAO {
 	{
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+        Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
         Statement st = con.createStatement();
 		 
@@ -135,7 +135,7 @@ public class CustomerDAO {
 			PreparedStatement preparedStatement;
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+			Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 			 Statement st = con.createStatement();
 			 
@@ -158,7 +158,7 @@ public class CustomerDAO {
 	{
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+        Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
         Statement st = con.createStatement();
 		 
@@ -178,7 +178,7 @@ public class CustomerDAO {
 	        
 	            Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-	            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+	            Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 	            Statement st = con.createStatement();
 
@@ -214,7 +214,7 @@ public class CustomerDAO {
     {     
             Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+            Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
             Statement st = con.createStatement();
    		 

@@ -26,7 +26,7 @@ public class EmployeeDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+			Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 			PreparedStatement preparedStatement = con.prepareStatement("select * from employees order by firstName asc");
 
@@ -58,7 +58,7 @@ public class EmployeeDAO {
 		{
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 	        Statement st = con.createStatement();
 			 
@@ -69,22 +69,11 @@ public class EmployeeDAO {
 				         
 		}
 		
-		public boolean employeeLogin(Integer employeeId,String employeeNamePassword) throws Exception,IllegalAccessException
-		{
-				Class.forName("com.mysql.jdbc.Driver").newInstance();
-
-				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
-
-					PreparedStatement preparedStatement = con.prepareStatement("select * from employees where employeeNumber = "+employeeId+" AND firstName= \""+employeeNamePassword+"\"");
-					ResultSet resultSet = preparedStatement.executeQuery();
-					return resultSet.isBeforeFirst();		
-		}
-		
 	public boolean isValidOfficeCode(Integer employeesByOfficeCode) throws Exception,IllegalAccessException
 	{
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+		Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 		Statement st = con.createStatement();
 
@@ -108,7 +97,7 @@ public class EmployeeDAO {
 		
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+			Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 			Statement st = con.createStatement();
 			ResultSet rs= st.executeQuery("select * from employees where officeCode ="+officeCode+" ");
@@ -142,7 +131,7 @@ public class EmployeeDAO {
 		
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "admin");
+		Connection con = DriverManager.getConnection("jdbc:mysql://my-db-instance.ct2edikokwo4.us-west-2.rds.amazonaws.com:3306/classicmodels", "db_user", "db_admin");
 
 		Statement st = con.createStatement();
 
